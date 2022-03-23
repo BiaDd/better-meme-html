@@ -1,0 +1,281 @@
+<!--
+
+Sources used: https://getbootstrap.com/docs/5.1/
+Bootstrap elements included
+- Navbar
+- Accordion
+- Collapse
+- Card
+- Carousel
+- Toast
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
+        <title>Site Has Interesting Things</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="author" content="define author of the page -- your name">
+        <meta name="description" content="define a description of this page">
+        <meta name="keywords" content="define keywords for search engines">
+
+        <!-- 3. link bootstrap -->
+        <!-- if you choose to use CDN for CSS bootstrap -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    </head>
+    <body>
+      <header class="container">
+        <div class="topnav">
+
+          <!-- Navbar ////////////////////////////////////-->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"> Home </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Navigation Toggler" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Collapse ////////////////////////////////////-->
+              <div class="collapse navbar-collapse" id="navbarItems">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link"
+                         href="facts.html">
+                        Facts
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"
+                         href="pictures.html">
+                        Pictures
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"
+                         href="animals.html">
+                        Animals
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"
+                         href="songs.html">
+                        Songs
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"
+                         href="interesting.html">
+                        Interesting
+                      </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        </header>
+
+
+        <div class="card text-center">
+          <div class="card-header">
+            <h1><span class="badge bg-secondary">✨</span> Welcome <span class="badge bg-secondary">✨</span> </h1>
+          </div>
+          <div class="card-body">
+
+            <img src="images/kermit.gif" alt=""/>
+
+            <h5 class="card-title">this site has interesting things</h5>
+            <p class="card-text">Click around to find interesting things!</p>
+          </div>
+          <div class="card-footer text-muted">
+            Enjoy!
+          </div>
+        </div>
+
+      <section class="container">
+        <h2>
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            How To Use Site Has Interesting Things
+          </a>
+        </h2>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body border-success mb-3 text-center">
+            Navigate the site by clicking the links in the navigation bar,
+            you'll see interesting facts, pictures, and all sorts of interesting things/memes!
+          </div>
+        </div>
+
+        <!-- Cards ////////////////////////////////////-->
+        <div class="card-group">
+          <div class="card">
+            <a href="pictures.html"><img src="images/interesting.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">MEMES</h5>
+              <p class="card-text">The freshest memes on the interwebs</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Hi my name's Jeff</small>
+            </div>
+          </div>
+          <div class="card">
+            <a href="animals.html"><img src="images/nodding.gif" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">GIFS</h5>
+              <p class="card-text"><p>The coolest gifs you can share with your aunt</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Cat is cool</small>
+            </div>
+          </div>
+          <div class="card">
+            <a href="interesting.html"><img src="images/lightningcat.gif" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h5 class="card-title">Cat Cool</h5>
+              <p class="card-text">A reaction for every ocassion</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Look into my soul</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col text-center">
+            <button type="button" class="btn btn-primary" id="liveToastBtn">New Message</button>
+        </div>
+
+
+        <!-- Accordion ////////////////////////////////////-->
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Facts
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Need to learn some cool facts?</strong> Click on <a href="facts.html">Facts</a> to learn some interesting and cool facts!
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Pictures
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Bored? Lonely? Look at some cool pictures!</strong> Click on <a href="pictures.html">Pictures</a> to see some interesting pictures!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Songs
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Want to find some new music?</strong> Click on <a href="songs.html">Songs</a> to listen to some sick tunes!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Carousel ////////////////////////////////////-->
+      <section class="container">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/cat.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Interesting Reactions</h5>
+              <p>Find interesting reactions to send to homies.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/ok.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Interesting Features</h5>
+              <p>Cool features scattered around.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/capibara.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Interesting Animals</h5>
+              <p>Interesting animals like the Capibara.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </section>
+
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">HEY!</strong>
+            <small>1 second ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            ur cute.
+          </div>
+        </div>
+      </div>
+
+
+      <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 my-4 mx-4 border-top border-bottom bg-dark text-white">
+        <small class="copyright">Copyright &copy; 2022 dxd3vmb</small>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 active">Home</a></li>
+            <li class="nav-item"><a href="facts.html" class="nav-link px-2 text-muted">Facts</a></li>
+            <li class="nav-item"><a href="animals.html" class="nav-link px-2 text-muted">Animals</a></li>
+            <li class="nav-item"><a href="pictures.html" class="nav-link px-2 text-muted">Pictures</a></li>
+            <li class="nav-item"><a href="songs.html" class="nav-link px-2 text-muted">Songs</a></li>
+            <li class="nav-item"><a href="interesting.html" class="nav-link px-2 text-muted">Interesting</a></li>
+        </ul>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+      <script>
+        var toastTrigger = document.getElementById('liveToastBtn')
+        var toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+          toastTrigger.addEventListener('click', function () {
+            var toast = new bootstrap.Toast(toastLiveExample)
+
+            toast.show()
+          })
+        }
+      </script>
+
+      </body>
+</html>

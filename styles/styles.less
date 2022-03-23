@@ -1,0 +1,53 @@
+@width: 300px;
+@font-size: 30px;
+@padding: 5px 5px 5px 5px;
+
+.bordered {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-shadow: 0.5px 0 0 black;
+}
+
+
+
+div {
+  padding: @padding;
+}
+
+p {
+  color: #8FBC8F;
+  background-color: Azure;
+  .bordered();
+  font-size: @font-size;
+}
+
+h5 {
+  .bordered();
+  font-size: @font-size;
+  padding:@padding;
+}
+
+header {
+
+  .topnav {
+    background-color: DarkSeaGreen;
+    .bordered();
+  }
+  li {
+    .bordered();
+
+    border-left: 2px black;
+    border-right: 2px black;
+
+  }
+}
+
+.container {
+  width: @width;
+  @media (min-width: 768px) {
+    width: @width + @width;
+  }
+  @media (min-width: 1280px) {
+    width: 800px;
+  }
+}
